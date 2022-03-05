@@ -408,7 +408,7 @@ turkeyMeat=0;
    
 data.email=$("#email_input").val();
 
-axios.post('/create/statistics', data)
+axios.post('/api/store/statistics', data)
 .then(function (response) {
   console.log(response);
 })

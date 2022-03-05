@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StatisticsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +15,16 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//public routes
+Route::POST('/store/statistics', [StatisticsController::class, 'store'])->name('create.statistics');//addto data base from the form
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::POST('/statstic/signin',[UserController::class,'login']);
+Route::POST('/statstic/signup',[UserController::class,'register']);
+
+//protected routes
+Route::group(["middleware" => ['auth:sanctum']], function () {
+Route::delete('/statstic/destroy',[StatisticsController::class,'destroy']);
+Route::get('/statstic/{id}',[StatisticsController::class,'index']);
+Route::get('/statstic/all',[StatisticsController::class,'all']);
+Route::POST('/statstic/signout',[UserController::class,'logout']);
+});//end protected route
