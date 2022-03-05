@@ -10,7 +10,9 @@
 					<link rel="shortcut icon" href="assets/images/favicon-meal-plan.png">
 				<link href="onboarding/new-eat-fita22d.css?v20201008174521" rel="stylesheet">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            
                 <script src="{{ asset('customjs/custom.js') }}?v={{ time() }}" ></script>
+                <script src="{{ asset('js/app.js') }}?v={{ time() }}" ></script>
 		<link rel="alternate" hreflang="x-default" href="index.html" />
 						<link rel="alternate" hreflang="en" href="index.html" />
 						<link rel="alternate" hreflang="ru" href="ru.html" />
@@ -25,46 +27,13 @@
 						<link rel="alternate" hreflang="kr" href="kr.html" />
 						<link rel="alternate" hreflang="pl" href="pl.html" />
 		
-		<script id="cookieyes" type="text/javascript" src="../cdn-cookieyes.com/client_data/a6496fd2908f9ebd80cc89a9.js"/>
+	
     
-		<!-- Start cookieyes banner -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-WB6NRHW"></script>
-		<!-- End cookieyes banner --> 
-		 
-								
-				<!-- new tag manager script -->
-				<script data-cookieyes="cookieyes-analytics">
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'GTM-WB6NRHW');
-				</script>
+		
+				
+			
 
-				<!-- old tag manager script -->
-				<script data-cookieyes="cookieyes-analytics">
-					(function (w, d, s, l, i) {
-						w[l] = w[l] || [];
-						w[l].push({
-							'gtm.start': new Date().getTime(),
-							event: 'gtm.js'
-						});
-						var f = d.getElementsByTagName(s)[0],
-							j = d.createElement(s),
-							dl = l != 'dataLayer' ? '&l=' + l : '';
-						j.async = true;
-						j.src = '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
-						f.parentNode.insertBefore(j, f);
-					})(window, document, 'script', 'dataLayer', 'GTM-WB6NRHW');
-				</script>
-
-				<script data-cookieyes="cookieyes-analytics">
-						(function(s,t,a,n){s[t]||(s[t]=a,n=s[a]=function(){n.q.push(arguments)},
-								n.q=[],n.v=2,n.l=1*new Date)})(window,"InstanaEumObject","ineum");
-						ineum('reportingUrl', 'https://eum-green-saas.instana.io/');
-						ineum('key', 'M7Zj284TRRK4Zi7HKY1taA');
-						ineum('trackSessions');
-				</script>
-				<script defer data-cookieyes="cookieyes-analytics" crossorigin="anonymous" src="../eum.instana.io/eum.min.js"></script>
+				
 
 						<title>Eat & Fit - أفضل أنظمة التمارين والحميات الغذائية سواء النباتية، على طريقة الكيتو أو إستراتيجيّة الصوم المتقطع.</title>
 <meta name="keywords" content="Personalized Diet And Workout Plan. Keto, Vegan, Intermittent Fasting." />
@@ -74,6 +43,7 @@
 		<meta name="csrf-token" content="xAvtv8Flzj3VBHYaqzY1uAyMoEcK9EtOqNEHckJ8">
 </head>
 <body class="ar ab_var_a obv2 ">
+
 <header class="header header_styled  header_with-bottom-line">
     <div class="header__inner">
                 <div class="header__logo">
@@ -346,18 +316,18 @@
                 <div class="choose-list__item-title">أقل من سنة</div>
             </div>
         </div>
-        <div class="choose-list__item">
-            <div class="choose-list__item-content last-time-data" data-LastTime="من سنة لـ سنتين">
+        <div class="choose-list__item last-time-data" data-LastTime="من سنة لـ سنتين">
+            <div class="choose-list__item-content">
                 <div class="choose-list__item-title">من سنة لـ سنتين</div>
             </div>
         </div>
-        <div class="choose-list__item">
-            <div class="choose-list__item-content last-time-data" data-LastTime="أكثر من 3 سنوات">
+        <div class="choose-list__item last-time-data" data-LastTime="أكثر من 3 سنوات">
+            <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أكثر من 3 سنوات</div>
             </div>
         </div>
-        <div class="choose-list__item">
-            <div class="choose-list__item-content last-time-data" data-LastTime="لا أتذكر أنني قد وصلت إلى الوزن المثالي مُسبقًا">
+        <div class="choose-list__item last-time-data" data-LastTime="لا أتذكر أنني قد وصلت إلى الوزن المثالي مُسبقًا">
+            <div class="choose-list__item-content " >
                 <div class="choose-list__item-title">لا أتذكر أنني قد وصلت إلى الوزن المثالي مُسبقًا</div>
             </div>
         </div>
@@ -370,27 +340,27 @@
     </div>
     <div class="select-box">
         <div class="select-box__wrap">
-            <div class="select-box__item">
+            <div class="select-box__item habits" id="late_night_food" habit="late_night_food">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-1.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">عادة ما أتناول الطعام في وقت متأخر من الليل</div>
             </div>
-            <div class="select-box__item">
-                <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-2.svg" alt="" width="45" role="presentation" /></div>
+            <div class="select-box__item habits" habit="bad_sleep">
+                <div class="select-box__item-image "><img class="select-box__item-image-i" src="onboarding/i/habits-image-2.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لا أنام بالشكل الكاف</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item habits" habit="daily_sugar">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-3.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لا يُمكن أن يمر يوم دون أن أتناول الحلوى والسكريات</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item habits" habit="soft_drinks">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-4.png" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">أعشق المشروبات الغازية</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item habits" habit="high_salt_intake">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-5.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">أعشق الملح وأستهلكه بكميات كبيرة</div>
             </div>
-            <div class="select-box__item select-box__item_remove">
+            <div class="select-box__item select-box__item_remove habits" habit="nothing">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/habits-image-6.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لا شيء مما سبق</div>
             </div>
@@ -424,22 +394,22 @@
                                         <div class="step-wrap__text">ما هو مستوى النشاط البدني الذي تقوم-تقومين به يوميًا؟</div>
     </div>
     <div class="choose-list">
-        <div class="choose-list__item">
-            <div class="choose-list__item-content">
+        <div class="choose-list__item fitness" fitness="لست من هواة الحركة على الإطلاق">
+            <div class="choose-list__item-content ">
                 <div class="choose-list__item-title">لست من هواة الحركة على الإطلاق</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item fitness" fitness="أتمرن من مرة إلى مرتين أسبوعيًا">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أتمرن من مرة إلى مرتين أسبوعيًا</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item fitness" fitness="أتمرن من 3 إلى 5 مرات أسبوعيًا">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أتمرن من 3 إلى 5 مرات أسبوعيًا</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item fitness" fitness="أتمرن من 5 إلى 7 مرات أسبوعيًا">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أتمرن من 5 إلى 7 مرات أسبوعيًا</div>
             </div>
@@ -453,19 +423,19 @@
 خلال يومك بأكمله⸮</div>
     </div>
     <div class="choose-list choose-list_male">
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="نعم، تظل مستويات الطاقة الخاصة بي ثابته تقريبًا طوال اليوم">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-6.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">نعم، تظل مستويات الطاقة الخاصة بي ثابته تقريبًا طوال اليوم</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="أشعر ببعض الخمول قبل مواعيد وجبات الطعام">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-7.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أشعر ببعض الخمول قبل مواعيد وجبات الطعام</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="أشعر بالنعاس بعد تناول وجبة الغداء">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-8.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أشعر بالنعاس بعد تناول وجبة الغداء</div>
@@ -473,19 +443,19 @@
         </div>
     </div>
     <div class="choose-list choose-list_female">
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="نعم، تظل مستويات الطاقة الخاصة بي ثابته تقريبًا طوال اليوم">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-9.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">نعم، تظل مستويات الطاقة الخاصة بي ثابته تقريبًا طوال اليوم</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="أشعر ببعض الخمول قبل مواعيد وجبات الطعام">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-10.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أشعر ببعض الخمول قبل مواعيد وجبات الطعام</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item energy" energy="أشعر بالنعاس بعد تناول وجبة الغداء">
             <div class="choose-list__item-image"><img class="choose-list__item-image-i" src="onboarding/i/icon-11.svg" alt="" role="presentation" /></div>
             <div class="choose-list__item-content">
                                   <div class="choose-list__item-title">أشعر بالنعاس بعد تناول وجبة الغداء</div>
@@ -501,22 +471,22 @@
                 <div class="step-wrap__text">كم عدد الساعات التي تنامها-تنامينها يوميًا؟</div>
     </div>
     <div class="choose-list">
-        <div class="choose-list__item">
+        <div class="choose-list__item sleep-schedule"  sleepSchedule="أقل من 5 ساعات">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أقل من 5 ساعات</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item sleep-schedule" sleepSchedule="من 5 إلى 6 ساعات">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">من 5 إلى 6 ساعات</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item sleep-schedule" sleepSchedule="من 7 إلى 8 ساعات">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">من 7 إلى 8 ساعات</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item sleep-schedule"  sleepSchedule="أكثر من 8 ساعات">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أكثر من 8 ساعات</div>
             </div>
@@ -529,55 +499,32 @@
         <div class="step-wrap__subtitle">الماء سر الحياه، وهو من العوامل الأساسية التي يُمكنها أن تُساعدك على تحقيق أهدافك بسرعة</div>
         <div class="step-wrap__text">ما هي كمية المياه التي تشربها-تشربينها يوميًا؟</div>
     </div>
-    <div class="water-intake">
+    <div class="water-intake4">
         <div class="toggle-content">
             <div class="water-intake__nav toggle-content-nav">
-                <div class="toggle-content-nav-item active" data-system="imperial" data-target=".imperial-water-intake-content">نظام إمبراطوري</div>
-                <div class="toggle-content-nav-item" data-system="metric" data-target=".metric-water-intake-content">نظام متري</div>
+                
+              
             </div>
             <div class="water-intake__content">
-                <div class="toggle-content-tab imperial-water-intake-content active" data-system="imperial">
-                    <div class="choose-list">
-                        <div class="choose-list__item">
-                            <div class="choose-list__item-content">
-                                <div class="choose-list__item-title">لا أتناول سوى القهوة أو الشاي</div>
-                            </div>
-                        </div>
-                        <div class="choose-list__item">
-                            <div class="choose-list__item-content">
-                                <div class="choose-list__item-title">أقل من كوبين (16 أونصه)</div>
-                            </div>
-                        </div>
-                        <div class="choose-list__item">
-                            <div class="choose-list__item-content">
-                                <div class="choose-list__item-title">من 2 إلى 6 أكواب (16-48 أونصة)</div>
-                            </div>
-                        </div>
-                        <div class="choose-list__item">
-                            <div class="choose-list__item-content">
-                                <div class="choose-list__item-title">أكثر من 6 أكواب</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="toggle-content-tab metric-water-intake-content" data-system="metric">
                     <div class="choose-list">
-                        <div class="choose-list__item">
+                        <div class="choose-list__item water-intake" waterIntake="لا أتناول سوى القهوة أو الشاي">
                             <div class="choose-list__item-content">
                                 <div class="choose-list__item-title">لا أتناول سوى القهوة أو الشاي</div>
                             </div>
                         </div>
-                        <div class="choose-list__item">
+                        <div class="choose-list__item water-intake" waterIntake="أقل من كوبين (0,5 لتر)">
                             <div class="choose-list__item-content">
                                 <div class="choose-list__item-title">أقل من كوبين (0,5 لتر)</div>
                             </div>
                         </div>
-                        <div class="choose-list__item">
+                        <div class="choose-list__item water-intake" waterIntake="من 2 إلى 6 أكواب (0,5-1,5 لتر)">
                             <div class="choose-list__item-content">
                                 <div class="choose-list__item-title">من 2 إلى 6 أكواب (0,5-1,5 لتر)</div>
                             </div>
                         </div>
-                        <div class="choose-list__item">
+                        <div class="choose-list__item water-intake" waterIntake="أكثر من 6 أكواب">
                             <div class="choose-list__item-content">
                                 <div class="choose-list__item-title">أكثر من 6 أكواب</div>
                             </div>
@@ -598,11 +545,11 @@
                           <div class="question-box__text">عادةً ما أحتاج إلى التحفيز بشكل مُستمر لكي أستمر في طريقي نحو تحقيق هدفي، فغالبًا ما أتقاعس بمجرد أن أشعر بالإحباط أو التوتر قليلًا.</div>
                     </div>
         <div class="question-box__wrap">
-            <div class="question-box__item">
+            <div class="question-box__item motivation" motivation="نعم، هذا أنا">
                 <div class="question-box__item-image"><img class="question-box__item-image-i" src="onboarding/i/question-icon-yes.svg" alt="" width="36" role="presentation" /></div>
                 <div class="question-box__item-title">نعم، هذا أنا</div>
             </div>
-            <div class="question-box__item">
+            <div class="question-box__item motivation" motivation="لا، لست كذلك">
                 <div class="question-box__item-image"><img class="question-box__item-image-i" src="onboarding/i/question-icon-no.svg" alt="" width="36" role="presentation" /></div>
                 <div class="question-box__item-title">لا، لست كذلك</div>
             </div>
@@ -619,11 +566,11 @@
             <div class="question-box__text">أشعر بأنني لن أمتلك الوقت الكافي لتأدية نشاطاتي وأعمالي اليومية لإنشغالي بالتمرن وإتباع الحميات الغذائية.</div>
         </div>
         <div class="question-box__wrap">
-            <div class="question-box__item">
+            <div class="question-box__item life-concerns" lifeConcerns="نعم، أظن ذلك.">
                 <div class="question-box__item-image"><img class="question-box__item-image-i" src="onboarding/i/question-icon-yes.svg" alt="" width="36" role="presentation" /></div>
                 <div class="question-box__item-title">نعم، أظن ذلك.</div>
             </div>
-            <div class="question-box__item">
+            <div class="question-box__item life-concerns" lifeConcerns="لا،أنا لا أفكر بهذه الطريقة">
                 <div class="question-box__item-image"><img class="question-box__item-image-i" src="onboarding/i/question-icon-no.svg" alt="" width="36" role="presentation" /></div>
                 <div class="question-box__item-title">لا،أنا لا أفكر بهذه الطريقة</div>
             </div>
@@ -640,35 +587,35 @@
     </div>
     <div class="select-box select-box_styled">
         <div class="select-box__wrap">
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="broccoli">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-1.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">البروكلي</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="sweet_potato">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-2.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">البطاطا الحُلوة</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="mushroom">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-3.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">المشروم - الفطر</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="tomatoes">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-4.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الطماطم</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="beans">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-5.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الفاصولياء</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="spinach">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-6.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">السبانخ</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="zucchini">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-7.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الكوسة - الكوسى</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item vegtables" vegtable="Pepper">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/vegetables-image-8.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الفلفل</div>
             </div>
@@ -686,43 +633,43 @@
     </div>
     <div class="select-box select-box_styled">
         <div class="select-box__wrap">
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="avocado">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-1.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الأفوكادو</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="eggs">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-2.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">البيض</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="yogurt">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-3.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الزبادي</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="quraish_cheese">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-4.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الجُبن القريش</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="tofu">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-5.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">التوفو</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="olive">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-6.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الزيتون</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="peanut_butter">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-7.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">زبدة الفول السوداني</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="nuts">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-8.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">المُكسّرات</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="mozzarella_cheese">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-9.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">جبن الموتزاريلا</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item food-products" foodProduct="milk">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/products-image-10.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الحليب</div>
             </div>
@@ -740,27 +687,27 @@
     </div>
     <div class="select-box select-box_styled select-box_fix-margin-offset">
         <div class="select-box__wrap">
-            <div class="select-box__item">
+            <div class="select-box__item meats" meat="turkeyMeat">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-1.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لحم الديك الرومي</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item meats" meat="fish">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-2.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الأسماك</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item meats" meat="liveStockMeat">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-3.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لحوم المواشي</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item meats" meat="chicken">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-4.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">الدجاج</div>
             </div>
-            <div class="select-box__item">
+            <div class="select-box__item meats" meat="pork">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-5.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لحم الخنزير</div>
             </div>
-            <div class="select-box__item select-box__item_remove">
+            <div class="select-box__item select-box__item_remove meats" meat="default">
                 <div class="select-box__item-image"><img class="select-box__item-image-i" src="onboarding/i/meat-image-6.svg" alt="" width="45" role="presentation" /></div>
                 <div class="select-box__item-title">لا أحب أيًا منها</div>
             </div>
@@ -777,66 +724,16 @@
 	<div class="body-measurements">
 		<div class="toggle-content">
 			<div class="body-measurements__nav toggle-content-nav">
-				<div class="toggle-content-nav-item active" data-system="imperial" data-target=".imperial-content">بالنظام البريطاني</div>
-				<div class="toggle-content-nav-item" data-system="metric" data-target=".metric-content">بالنظام المتري</div>
+		
 			</div>
 			<div class="body-measurements__content">
-				<div class="toggle-content-tab imperial-content active" data-system="imperial">
-					<div class="measurement-fields">
-						<div class="measurement-field">
-							<div class="measurement-field__title">العمر</div>
-							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="العمر" data-type="age" />
-								<div class="measurement-field__label">سنوات</div>
-							</div>
-							<div class="measurement-field__error-label">عمر غير صالح</div>
-						</div>
-						<div class="measurement-field__row">
-							<div class="measurement-field__item">
-								<div class="measurement-field">
-									<div class="measurement-field__title">الارتفاع</div>
-									<div class="measurement-field__wrap">
-										<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الارتفاع" data-type="heightFt" />
-										<div class="measurement-field__label">قدم</div>
-									</div>
-									<div class="measurement-field__error-label">ارتفاع غير صالح</div>
-								</div>
-							</div>
-							<div class="measurement-field__item">
-								<div class="measurement-field">
-									<div class="measurement-field__title">الارتفاع</div>
-									<div class="measurement-field__wrap">
-										<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الارتفاع" data-type="heightIn" />
-										<div class="measurement-field__label">بوصة</div>
-									</div>
-									<div class="measurement-field__error-label">ارتفاع غير صالح</div>
-								</div>
-							</div>
-						</div>
-						<div class="measurement-field">
-							<div class="measurement-field__title">الوزن</div>
-							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن" data-type="weightLbs" />
-								<div class="measurement-field__label">رطل</div>
-							</div>
-							<div class="measurement-field__error-label">وزن غير صالح</div>
-						</div>
-						<div class="measurement-field">
-							<div class="measurement-field__title">الوزن المُستهدف</div>
-							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن المُستهدف" data-type="targetWeightLbs" />
-								<div class="measurement-field__label">رطل</div>
-							</div>
-							<div class="measurement-field__error-label">الوزن المُستهدف غير صالح</div>
-						</div>
-					</div>
-				</div>
+			
 				<div class="toggle-content-tab metric-content" data-system="metric">
 					<div class="measurement-fields">
 						<div class="measurement-field">
 							<div class="measurement-field__title">العمر</div>
 							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="العمر" data-type="age" />
+								<input id="age_input" class="measurement-field__input" type="number" autocomplete="off" placeholder="العمر" data-type="age" />
 								<div class="measurement-field__label">سنوات</div>
 							</div>
 							<div class="measurement-field__error-label">عمر غير صالح</div>
@@ -844,7 +741,7 @@
 						<div class="measurement-field">
 							<div class="measurement-field__title">الارتفاع</div>
 							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الارتفاع" data-type="height" />
+								<input id="height_input" class="measurement-field__input" type="number" autocomplete="off" placeholder="الارتفاع" data-type="height" />
 								<div class="measurement-field__label">سم</div>
 							</div>
 							<div class="measurement-field__error-label">ارتفاع غير صالح</div>
@@ -852,7 +749,7 @@
 						<div class="measurement-field">
 							<div class="measurement-field__title">الوزن</div>
 							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن" data-type="weight" />
+								<input id="weight_input" class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن" data-type="weight" />
 								<div class="measurement-field__label">كغ</div>
 							</div>
 							<div class="measurement-field__error-label">وزن غير صالح</div>
@@ -860,7 +757,7 @@
 						<div class="measurement-field">
 							<div class="measurement-field__title">الوزن المُستهدف</div>
 							<div class="measurement-field__wrap">
-								<input class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن المُستهدف" data-type="targetWeight" />
+								<input id="weight_target_input" class="measurement-field__input" type="number" autocomplete="off" placeholder="الوزن المُستهدف" data-type="targetWeight" />
 								<div class="measurement-field__label">كغ</div>
 							</div>
 							<div class="measurement-field__error-label">الوزن المُستهدف غير صالح</div>
@@ -875,7 +772,7 @@
 		</div>
 	</div>
 	<div class="step-wrap__button-wrap step-wrap__button-wrap_fix-offset-bottom">
-		<div class="step-wrap__button custom-btn custom-btn custom-btn_default disabled">المُتابعة</div>
+		<div id="input_next_button" class="step-wrap__button custom-btn custom-btn custom-btn_default disabled">المُتابعة</div>
 	</div>
 </section>
 								<div class='step-wrap__footer step-wrap__footer_styled'>
@@ -1103,17 +1000,17 @@
 لتحضير الطعام كل يوم</div>
     </div>
     <div class="choose-list">
-        <div class="choose-list__item">
+        <div class="choose-list__item  cook-time" time="أقل من 30 دقيقة">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أقل من 30 دقيقة</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item cook-time" time="من 30 إلى 60 دقيقة">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">من 30 إلى 60 دقيقة</div>
             </div>
         </div>
-        <div class="choose-list__item">
+        <div class="choose-list__item cook-time" time="أكثر من ساعة">
             <div class="choose-list__item-content">
                 <div class="choose-list__item-title">أكثر من ساعة</div>
             </div>
@@ -1148,11 +1045,11 @@
         </div>
     </div>
 </section>
-				<section class="step-wrap__body step-wrap__body_step-24" data-step="24" data-xhr="https://betterme-mealplan.com/ar/order">
+				<section class="step-wrap__body step-wrap__body_step-24" data-step="24">
     <div class="input-box" data-fitness-plan="نظام تحسين اللياقة البدنيّة" data-loss-plan="نظام إنقاص الوزن">
                     <div class="input-box__title">أحصل على أنظمة مُصمّمة خصيصًا من أجلك مثل: <span class="input-box__title-label">نظام تحسين اللياقة البدنيّة</span> في لمح البصر، وسنحرص على إرسالها إلى بريدك الإلكتروني على الفور!</div>
                 <div class="form-group form-group_email-help">
-          <input class="input-box__input" type="email" placeholder="من فضلك أدخل عنوان البريد الإلكتروني الخاص بك" list="topEmails" />
+          <input id="email_input" class="input-box__input" type="email" placeholder="من فضلك أدخل عنوان البريد الإلكتروني الخاص بك" list="topEmails" />
           <div class="input-box__input-list">
             <div class="input-box__input-item" data-value="@gmail.com">@gmail.com</div>
             <div class="input-box__input-item" data-value="@yahoo.com">@yahoo.com</div>
@@ -1171,7 +1068,7 @@
                 <div class="input-box__label input-box__label_legal">نحن نحترم خصوصيتك لأقصى درجة ومُلتزمون تمام الالتزام بالحفاظ على سرية معلوماتك الشخصية. سنقوم بإرسال نسخة من نتائجك إلى بريدك الإلكتروني الخاص.</div>
     </div>
     <div class="step-wrap__button-wrap step-wrap__button-wrap_fix-offset-bottom">
-        <div class="step-wrap__button custom-btn custom-btn custom-btn_default disabled">المُتابعة</div>
+        <div id="final_submit" class="step-wrap__button custom-btn custom-btn custom-btn_default disabled">المُتابعة</div>
     </div>
 </section>
 						</div>
@@ -1322,16 +1219,10 @@
         exports.ABFlag = abFlag;
         console.log('Email consent: ' + abFlag.emailConsent());
     })(window);
-</script><script type="text/javascript" src="onboarding/js/new-eat-fit.vendor.js"></script>
+</script>
 <script type="text/javascript" src="onboarding/js/new-eat-fita22d.js?v20201008174521"></script>
 
-<!-- Start of eatandfitsupport Zendesk Widget script -->
-<script id="ze-snippet" src="../static.zdassets.com/ekr/snippet37b5.js?key=d54e39ee-143c-4c7c-9022-a1edac1cd1e8"></script>
-<script data-cookieyes="cookieyes-analytics" type="text/javascript">
 
-</script>
-<script data-cookieyes="cookieyes-analytics" src="onboarding/src/vendor/zendesk.js"></script>
-<!-- End of eatandfitsupport Zendesk Widget script -->
 
 </body>
 

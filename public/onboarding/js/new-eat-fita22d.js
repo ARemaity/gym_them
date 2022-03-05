@@ -6212,11 +6212,7 @@
                                                   });
                                           }),
                                     (e = e("abort"));
-                                try {
-                                    s.send((t.hasContent && t.data) || null);
-                                } catch (t) {
-                                    if (e) throw t;
-                                }
+                                
                             },
                             abort: function () {
                                 e && e();
@@ -11474,7 +11470,7 @@
                                         )
                                         .index()
                                 ];
-                                if (void 0 === e) throw "Unknown system";
+                                if (void 0 === e){};
                                 var i = t
                                     .find(
                                         ".toggle-content-tab.active .number-field__input"
@@ -11499,7 +11495,7 @@
                                         )
                                         .index()
                                 ];
-                                if (void 0 === e) throw "Unknown system";
+                                if (void 0 === e){};
                                 var i = t.find(".toggle-content-tab.active");
                                 if ("imperial" === e) {
                                     var o = i.find("select.select-ft").val(),
@@ -11703,7 +11699,7 @@
                                         )
                                         .index()
                                 ];
-                                if (void 0 === i) throw "Unknown system";
+                                if (void 0 === i) {};
                                 var o = [
                                     "only_coffee_or_tea",
                                     "less_than_2_glasses",
@@ -11888,7 +11884,7 @@
                                         )
                                         .index()
                                 ];
-                                if (void 0 === e) throw "Unknown system";
+                                if (void 0 === e){};
                                 var i = t
                                     .find(
                                         '.toggle-content-tab.active [data-type="age"]'
@@ -12103,14 +12099,9 @@
                             diet: n.getItem("diet"),
                         }),
                         r = i()({ ageNum: n.getItem("ageNum") });
-                    f("u_data", e, 1), f("u_data_age", r, 1);
+                 
                 }
-                function f(t, e, n) {
-                    var r = new Date();
-                    r.setTime(r.getTime() + 24 * n * 60 * 60 * 1e3);
-                    var i = "expires=" + r.toUTCString();
-                    document.cookie = t + "=" + e + ";" + i + ";path=/";
-                }
+               
                 function d(t) {
                     document.cookie =
                         t + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";

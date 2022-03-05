@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::POST('/create/statistics', [StatisticsController::class, 'create'])->name('create.statistics');
