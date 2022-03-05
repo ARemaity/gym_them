@@ -413,19 +413,10 @@ axios.post('/create/statistics', data)
   console.log(response);
 })
 .catch(function (error) {
-  console.log("werwe");
+  console.log("an error occured");
 });
 
     });
-
-
-
-
-
-
-
-
-
 
 
 });//end on ready
